@@ -3,101 +3,278 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>gb233 - 个人主页</title>
-    <link rel="stylesheet" href="style.css">
+    <title>gb233 - Developer & Creator</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <!-- Navigation -->
+    <nav class="nav" id="nav">
+        <div class="nav-container">
+            <a href="#" class="nav-logo">
+                <span class="logo-bracket">&lt;</span>gb233<span class="logo-bracket">/&gt;</span>
+            </a>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#about" class="nav-link">关于</a></li>
+                <li><a href="#skills" class="nav-link">技能</a></li>
+                <li><a href="#projects" class="nav-link">项目</a></li>
+                <li><a href="#contact" class="nav-link">联系</a></li>
+            </ul>
+        </div>
+    </nav>
+
     <!-- Hero Section -->
     <section class="hero">
-        <div class="container">
-            <div class="hero-content">
-                <div class="avatar">
-                    <div class="avatar-placeholder">G</div>
-                </div>
-                <h1 class="hero-title">gb233</h1>
-                <p class="hero-subtitle">开发者 / 技术爱好者</p>
-                <p class="hero-description">热爱编程，探索技术，创造价值</p>
-                <div class="hero-links">
-                    <a href="https://github.com/gb233" target="_blank" class="btn btn-primary">
-                        <svg class="icon" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
-                        GitHub
-                    </a>
-                    <a href="mailto:591755744@qq.com" class="btn btn-secondary">联系我</a>
-                </div>
+        <div class="hero-bg">
+            <div class="gradient-orb orb-1"></div>
+            <div class="gradient-orb orb-2"></div>
+            <div class="gradient-orb orb-3"></div>
+        </div>
+        <div class="hero-content">
+            <div class="hero-badge">
+                <span class="badge-dot"></span>
+                正在寻找新机会
+            </div>
+            <h1 class="hero-title">
+                <span class="title-line">Hello, I'm</span>
+                <span class="title-name">gb233</span>
+            </h1>
+            <p class="hero-subtitle">
+                <span class="typing-text" id="typingText"></span>
+                <span class="typing-cursor">|</span>
+            </p>
+            <p class="hero-description">
+                热爱探索技术边界，专注于创造优雅且实用的数字体验。
+                从代码到设计，追求每一个细节的完美。
+            </p>
+            <div class="hero-actions">
+                <a href="#projects" class="btn btn-primary">
+                    查看作品
+                    <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M5 12h14M12 5l7 7-7 7"/>
+                    </svg>
+                </a>
+                <a href="https://github.com/gb233" target="_blank" class="btn btn-secondary">
+                    <svg class="btn-icon" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                    </svg>
+                    GitHub
+                </a>
             </div>
         </div>
         <div class="scroll-indicator">
-            <div class="mouse"></div>
+            <div class="mouse">
+                <div class="wheel"></div>
+            </div>
+            <span class="scroll-text">向下滚动</span>
         </div>
     </section>
 
     <!-- About Section -->
-    <section class="about" id="about">
+    <section class="section about" id="about">
         <div class="container">
-            <h2 class="section-title">关于我</h2>
-            <div class="about-content">
-                <div class="about-card">
-                    <div class="card-icon">💻</div>
-                    <h3>编程开发</h3>
-                    <p>热衷于学习新技术，开发有趣的项目</p>
+            <div class="section-header">
+                <span class="section-tag">关于我</span>
+                <h2 class="section-title">创造与探索</h2>
+                <p class="section-desc">热爱技术，享受将想法转化为现实的过程</p>
+            </div>
+            <div class="about-grid">
+                <div class="about-card" data-aos="fade-up" data-aos-delay="0">
+                    <div class="card-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/>
+                        </svg>
+                    </div>
+                    <h3 class="card-title">代码工匠</h3>
+                    <p class="card-text">追求优雅的代码架构，注重可维护性和性能优化。相信好的代码是自解释的。</p>
                 </div>
-                <div class="about-card">
-                    <div class="card-icon">🚀</div>
-                    <h3>持续学习</h3>
-                    <p>保持好奇心，不断探索前沿技术</p>
+                <div class="about-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="card-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/>
+                        </svg>
+                    </div>
+                    <h3 class="card-title">持续学习</h3>
+                    <p class="card-text">保持对新技术的敏感度，不断探索前沿领域。学习是一生的事业。</p>
                 </div>
-                <div class="about-card">
-                    <div class="card-icon">🤝</div>
-                    <h3>开源贡献</h3>
-                    <p>参与开源社区，分享技术经验</p>
+                <div class="about-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="card-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/>
+                        </svg>
+                    </div>
+                    <h3 class="card-title">开源贡献</h3>
+                    <p class="card-text">积极参与开源社区，分享知识，与全球开发者共同成长。</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Skills Section -->
-    <section class="skills" id="skills">
+    <section class="section skills" id="skills">
         <div class="container">
-            <h2 class="section-title">技术栈</h2>
-            <div class="skills-grid">
-                <div class="skill-tag">JavaScript</div>
-                <div class="skill-tag">TypeScript</div>
-                <div class="skill-tag">Python</div>
-                <div class="skill-tag">React</div>
-                <div class="skill-tag">Node.js</div>
-                <div class="skill-tag">Git</div>
-                <div class="skill-tag">HTML/CSS</div>
-                <div class="skill-tag">Linux</div>
+            <div class="section-header">
+                <span class="section-tag">技术栈</span>
+                <h2 class="section-title">我的工具箱</h2>
+                <p class="section-desc">熟练掌握多种技术，根据需求选择最合适的工具</p>
+            </div>
+            <div class="skills-container">
+                <div class="skill-category">
+                    <h3 class="category-title">前端开发</h3>
+                    <div class="skill-list">
+                        <div class="skill-item">
+                            <span class="skill-name">JavaScript / TypeScript</span>
+                            <div class="skill-bar"><div class="skill-progress" style="width: 90%"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">React / Next.js</span>
+                            <div class="skill-bar"><div class="skill-progress" style="width: 85%"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">HTML5 / CSS3</span>
+                            <div class="skill-bar"><div class="skill-progress" style="width: 95%"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Vue.js</span>
+                            <div class="skill-bar"><div class="skill-progress" style="width: 75%"></div></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3 class="category-title">后端 & 工具</h3>
+                    <div class="skill-list">
+                        <div class="skill-item">
+                            <span class="skill-name">Node.js / Python</span>
+                            <div class="skill-bar"><div class="skill-progress" style="width: 80%"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Git / GitHub</span>
+                            <div class="skill-bar"><div class="skill-progress" style="width: 90%"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Docker / Linux</span>
+                            <div class="skill-bar"><div class="skill-progress" style="width: 70%"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Database (SQL/NoSQL)</span>
+                            <div class="skill-bar"><div class="skill-progress" style="width: 75%"></div></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tech-stack">
+                <span class="tech-tag">React</span>
+                <span class="tech-tag">TypeScript</span>
+                <span class="tech-tag">Node.js</span>
+                <span class="tech-tag">Python</span>
+                <span class="tech-tag">Git</span>
+                <span class="tech-tag">Docker</span>
+                <span class="tech-tag">Linux</span>
+                <span class="tech-tag">AWS</span>
             </div>
         </div>
     </section>
 
     <!-- Projects Section -->
-    <section class="projects" id="projects">
+    <section class="section projects" id="projects">
         <div class="container">
-            <h2 class="section-title">项目展示</h2>
+            <div class="section-header">
+                <span class="section-tag">项目展示</span>
+                <h2 class="section-title">精选作品</h2>
+                <p class="section-desc">每个项目都是一次学习与成长的机会</p>
+            </div>
             <div class="projects-grid">
-                <div class="project-card">
-                    <div class="project-header">
-                        <h3>个人网站</h3>
-                        <span class="project-badge">进行中</span>
+                <article class="project-card featured">
+                    <div class="project-image">
+                        <div class="project-placeholder">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1">
+                                <rect x="3" y="3" width="18" height="18" rx="2"/>
+                                <path d="M3 9h18M9 21V9"/>
+                            </svg>
+                        </div>
+                        <div class="project-overlay">
+                            <a href="https://github.com/gb233" target="_blank" class="project-link">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/>
+                                </svg>
+                            </a>
+                        </div>
                     </div>
-                    <p class="project-desc">基于 GitHub Pages 搭建的个人主页</p>
-                    <div class="project-tech">
-                        <span>HTML</span>
-                        <span>CSS</span>
-                        <span>JavaScript</span>
+                    <div class="project-content">
+                        <div class="project-header">
+                            <h3 class="project-title">个人网站</h3>
+                            <span class="project-status">进行中</span>
+                        </div>
+                        <p class="project-desc">基于 GitHub Pages 构建的现代化个人主页，采用玻璃拟态设计风格，支持响应式布局和流畅动画。</p>
+                        <div class="project-tech">
+                            <span>HTML5</span>
+                            <span>CSS3</span>
+                            <span>JavaScript</span>
+                        </div>
                     </div>
-                    <a href="#" class="project-link">查看项目 →</a>
-                </div>
-                <div class="project-card">
-                    <div class="project-header">
-                        <h3>更多项目</h3>
+                </article>
+
+                <article class="project-card">
+                    <div class="project-content">
+                        <div class="project-header">
+                            <h3 class="project-title">更多项目</h3>
+                            <span class="project-status">持续更新</span>
+                        </div>
+                        <p class="project-desc">探索更多有趣的项目，涵盖 Web 开发、工具脚本、开源贡献等多个领域。</p>
+                        <div class="project-tech">
+                            <span>Various</span>
+                        </div>
+                        <a href="https://github.com/gb233" target="_blank" class="project-cta">
+                            访问 GitHub
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M5 12h14M12 5l7 7-7 7"/>
+                            </svg>
+                        </a>
                     </div>
-                    <p class="project-desc">更多精彩项目正在开发中，敬请期待...</p>
-                    <a href="https://github.com/gb233" target="_blank" class="project-link">访问 GitHub →</a>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section contact" id="contact">
+        <div class="container">
+            <div class="contact-container">
+                <div class="contact-content">
+                    <span class="section-tag">联系方式</span>
+                    <h2 class="contact-title">让我们一起创造</h2>
+                    <p class="contact-desc">有想法或合作意向？欢迎随时与我联系，期待与你的交流。</p>
+                    <div class="contact-links">
+                        <a href="mailto:591755744@qq.com" class="contact-item">
+                            <div class="contact-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                                </svg>
+                            </div>
+                            <div class="contact-info">
+                                <span class="contact-label">邮箱</span>
+                                <span class="contact-value">591755744@qq.com</span>
+                            </div>
+                        </a>
+                        <a href="https://github.com/gb233" target="_blank" class="contact-item">
+                            <div class="contact-icon">
+                                <svg viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                                </svg>
+                            </div>
+                            <div class="contact-info">
+                                <span class="contact-label">GitHub</span>
+                                <span class="contact-value">@gb233</span>
+                            </div>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -107,11 +284,10 @@
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
-                <p>&copy; 2025 gb233. All rights reserved.</p>
-                <div class="footer-links">
-                    <a href="https://github.com/gb233" target="_blank">GitHub</a>
-                    <a href="mailto:591755744@qq.com">邮箱</a>
-                </div>
+                <p class="footer-text">
+                    <span class="logo-bracket">&lt;</span>gb233<span class="logo-bracket">/&gt;</span>
+                </p>
+                <p class="footer-copy">© 2025 gb233. All rights reserved.</p>
             </div>
         </div>
     </footer>
