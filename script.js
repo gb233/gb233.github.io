@@ -44,10 +44,10 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 // Typing effect
 const typingText = document.getElementById('typingText');
 const phrases = [
-    '全栈开发者',
-    '开源爱好者',
-    '技术探索者',
-    '终身学习者'
+    '网络安全从业者',
+    '安全建设实践者',
+    '应用安全研究者',
+    'DevSecOps 践行者'
 ];
 let phraseIndex = 0;
 let charIndex = 0;
